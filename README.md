@@ -10,6 +10,7 @@ https://m.blog.naver.com/PostView.nhn?blogId=ndb796&logNo=221304215015&proxyRefe
 
 # <기초 용어 설명>
 "commit" : 깃허브로 코드를 보내기 위한 준비과정(버전을 만드는 것)
+
 "push"	: 커밋으로 준비된 코드를 깃허브에 업로드하는 과정
 
 # <필요한 명령어 모음>
