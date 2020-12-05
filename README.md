@@ -28,7 +28,7 @@ git commit -m "커밋 메세지"
 
 git push
 
-
+=============
 
 gut pull
 //깃헙->구름으로 가져오기
