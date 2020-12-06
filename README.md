@@ -1,6 +1,12 @@
 # 백준 문제풀이
 anacoluthon
 
+
+# 푼 문제들
+.
+.
+.
+
 # 참고용 사이트들
 https://www.acmicpc.net/problem/4796
 
@@ -32,8 +38,3 @@ git push
 
 gut pull
 //깃헙->구름으로 가져오기
-
-# 푼 문제들
-.
-.
-.
