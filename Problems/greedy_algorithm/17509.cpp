@@ -1,7 +1,39 @@
 #include <iostream>
-//17509
+//https://www.acmicpc.net/problem/17509
 /*
+And the WInner Is... Ourseleves!
 
+문제
+Let us remind you about how the total penalties are calculated for this contest:
+
+When you solve a problem at  minutes,  is added to your penalty, where  is the number of incorrect verdicts (except compile errors) received on that problem.
+If you do not solve a problem before the contest ends, the incorrect verdicts on that problem are not counted as penalties.
+Here is a bad news for all of you: we, the problem setters, are planning to join the competition and solve our own problems!
+
+We know our problems really well, so we can solve all the problems before the contest ends. Furthermore, we can precisely predict how long it takes to solve each problem, and how many incorrect verdicts (except compile errors) we get in each problem. Depending on the order of the problems we solve, our total penalty might differ. What is the minimum penalty if we solve all problems?
+
+입력
+11 lines are given as the input. The -th line contains two space-separated integers, 
+ and 
+, where 
+ is the amount of minutes required to solve the -th problem, and 
+ is the number of incorrect verdicts on the -th problem.
+
+For each , 
+ and 
+. Also, 
+.
+
+출력
+Output the minimum penalty if we solve all problems.
+
+<그림파일이라 짤린 게 좀 있음.>
+
+해석 : D V가 연속적으로 주어짐.
+D는 푸는데 걸린 시간 V는 발생한 오류들.
+문제를 마쳤을 때, 걸린 총 시간(이전 시간까지 합한 값)이 T인데,
+각 문제를 마칠 때 마다 T+20V만큼 페널티가 생김.
+입력된 여러 문제와 오류를 잘 배열시키면 페널티를 줄일 수 있는데, 이 때 최소 페널티값을 구하는 문제.
 G
 1. stl이용 X 왜냐면 케이스가 몇개 없으니까.
 2. 정렬 도중에 합하여 짧게 함
