@@ -6,7 +6,7 @@ typedef long long ll;
 //acmicpc.net/problem/1493
 
 /*
-문제명: 
+문제명: 박스 채우기
 TL: 2s
 ML: 128MB
 
@@ -24,12 +24,13 @@ ll max	2^63-1	2^18쯤
 2. 구상을 8개로 나눴는데 4개로 했어도 되었을듯. 조금 아쉬움
 3. 코드가 너무 복잡해졌음. 함수 리턴을 이용하는게 pt은 줄어도 보기가 복잡해 st가 늘어남.
 
-conceipt: 
-solution: 
-Q1: 
-A1: 
-keypoint: 
+conceipt: 나누어서 풀자
+solution: 나누어서 실행햇다
+Q1: int ll 다른 점
+A1: 위에 적어 놓음
+keypoint: 끈기!
 
+TU: 3d
 TS: 0ms
 MS: 2112KB
 CD: 1479B
