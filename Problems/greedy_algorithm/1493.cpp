@@ -137,6 +137,12 @@ int main()
 }
 
 /*
+L W H
+N
+.
+.
+.
+
 
 N N N		L-N N N
 N W-N N	L-N W-N N
