@@ -25,7 +25,7 @@ Q1:
 A1: 
 
 NEW :
-keypoint: 
+keypoint: 안풀려도 조급해하지말고 즐기면서 하자!
 
 TU: 5h
 TS: 0ms
