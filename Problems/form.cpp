@@ -1,4 +1,3 @@
-#include <iostream>
 //acmicpc.net/problem/
 
 /*
@@ -30,8 +29,3 @@ TU: m
 TS: ms
 MS: KB
 */
-
-int main()
-{
-	
-}
