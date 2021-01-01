@@ -24,7 +24,7 @@
 	
 	
 	
-+ https://blog.naver.com/kks227/220776241154
++ https://blog.naver.com/kks227/220777103650
 	+ https://www.acmicpc.net/workbook/view/3755
 	+ kks227님의 블로그와 그에 관한 문제들
 	
