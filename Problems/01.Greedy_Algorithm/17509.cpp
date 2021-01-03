@@ -1,16 +1,9 @@
 #include <iostream>
-//https://www.acmicpc.net/problem/17509
+//acmicpc.net/problem/17509
+
 /*
-And the WInner Is... Ourseleves!
+문제명: And the WInner Is... Ourseleves!
 
-문제
-Let us remind you about how the total penalties are calculated for this contest:
-
-When you solve a problem at  minutes,  is added to your penalty, where  is the number of incorrect verdicts (except compile errors) received on that problem.
-If you do not solve a problem before the contest ends, the incorrect verdicts on that problem are not counted as penalties.
-Here is a bad news for all of you: we, the problem setters, are planning to join the competition and solve our own problems!
-
-We know our problems really well, so we can solve all the problems before the contest ends. Furthermore, we can precisely predict how long it takes to solve each problem, and how many incorrect verdicts (except compile errors) we get in each problem. Depending on the order of the problems we solve, our total penalty might differ. What is the minimum penalty if we solve all problems?
 
 입력
 11 lines are given as the input. The -th line contains two space-separated integers, 
@@ -44,6 +37,8 @@ B
 2. 왜케 용량이 큼? (stl과 용량에 대해서도 공부하기.) [작은거같기도하고 ]
 3. 시간에 대한 이해를 못한거같기도함 영어문제가 아니라.
 */
+
+
 int main()
 {
 	int min_idx,tmp,v,penalty = 0,t=0;

@@ -1,38 +1,64 @@
 #include <iostream>
 #include <math.h>
-#include <algorithm>//1100
+#include <algorithm>
+//acmicpc.net/problem/2447
 
-int n,a,b,ret,i,idx_a,idx_b;
-bool arr_a[16];
-bool arr_b[16];
-//n ~ 2^15.
-//7 7  111 111 (4-1)*2^(2^2)+(4-1) *2^(2^1) + (4-1) * 2^(2^0)               6 2   110 010   2 * 2^4 +  3 * 2^2 +   0 
+/*
+문제명: 별찍기 10
+TL: s
+ML: MB
+
+-저장이 날라갔다.-
+
+Good
+1. 예전보다 간결하게 풀었다.
+2. 다시 푸는 문제도 배울 게 있음을 알게 되었다.
+3. 
+
+Bad
+1. 구상에 시간이 좀 걸렸다.
+2. 
+3. 
+
+conceipt: i,j,len에 따라 규칙을 변환시켜 해결하였따.
+solution: 
+Q1: 
+A1: 
+
+NEW :
+keypoint: 
+
+TU: m
+TS: 252ms
+MS: 2016KB
+*/
+//1100
+#include <iostream>
+int N;
+void print_star(int i,int j,int len)
+{
+	if(len != 1)	
+	{
+		len /= 3;
+		if(i/ (len) == 1 && j / (len) == 1)
+			printf(" ");
+		else
+			print_star(i%len,j%len,len);
+	}
+	else
+		printf("*");
+	
+}
 int main()
 {
-	scanf("%d %d %d",&n,&a,&b);
-	
-	for(int temp = a;temp>0;temp/=2,idx_a++);
-	
-	while(a>0)
+	scanf("%d",&N);
+    
+	for(int i=0;i<N;i++)
 	{
-		arr_a[i++] = a %2;
-		a /=2;
-	}
-	
-	for(int temp = b;temp>0;temp/=2,idx_b++);
-	i = 0;
-	while(b>0)
-	{
-		arr_b[i++] = b %2;
-		b /=2;
-	}
-	i = std::max(idx_a,idx_b);
-	
-	while(n-- >= 0)
-	{
-		ret += arr_a[n]*2 * (1 << 2*n) + arr_b[n]*1  * (1 << 2 *n);
-	}
-	printf("%d",ret);
-	
-	return 0;
+		for(int j=0;j<N;j++)
+		{
+			print_star(i,j,N);
+		}
+		printf("\n");
+	}	
 }

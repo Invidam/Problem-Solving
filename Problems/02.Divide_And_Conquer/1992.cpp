@@ -1,10 +1,6 @@
 #include <iostream>
 #include <algorithm>
 //https://www.acmicpc.net/problem/1992
-int N, i, j;
-char arr[1 << 6+1][1 << 6+1];
-//0937 ~1018 = 40m
-//문제는 데이터표현을 어떻게 할 것인가?
 /*
 문제명: 쿼드트리
 TL: 2s
@@ -13,8 +9,8 @@ ML: 128MB
 
 
 Good
-1. 잘배움
-2. 
+1. 잘배웠다.
+2. 메모하는 습관이 좋았다.
 3. 
 
 Bad
@@ -27,13 +23,15 @@ solution:
 Q1: 
 A1: 
 
-NEW : 메모리 많던게 컴파일러나 환경이 바뀌어서 그런 거였음. 내가 못한게 아니라 
+NEW : 메모리 많던게 컴파일러나 환경이 바뀌어서 그런 거였다.
 keypoint: 
 
 TU: 40m
 TS: 0ms
 MS: 2020KB
 */
+int N, i, j;
+char arr[1 << 6+1][1 << 6+1];
 void solve(int s1,int s2,int len)
 {
 	printf("(");

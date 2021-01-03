@@ -1,19 +1,37 @@
 #include <iostream>
 #include <algorithm>
-//1463
+//acmicpc.net/problem/1463
 
 /*
+문제명: 1로 만들기
+TL: 2s
+ML: 128MB
+
+
+
 G
-1 쉬운문제여서 딱히 배운게 X
+1 기본적인 dp문제를 통해 dp문제가 어떻게 구성되어 있는지를 배웠다.
 2
 3
 
 B
-1 빨리푸느라 좀 햇갈려함.
+1 빨리푸느라 조금의 실수가 있었다. (temp 에 1 더하지 않았던 것.)
 2
 3
 
+conceipt: 기본적인 dp 문제.
+solution: f(n) = max(f(n-1) , f(n/2) , f(n,3)) + 1 임을 이용.
+Q1: 
+A1: 
+
+NEW :
+keypoint: 
+
+TU: 5m
+TS: 36ms
+MS: 37052KB
 */
+
 int arr[1000001];
 int N;
 
