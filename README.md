@@ -34,8 +34,9 @@
 	+ 구름 백준 연동법
 	
 
-
-
++ https://kdh9949.tistory.com/28
+	+ 보고좀배워라..! (┬┬﹏┬┬)
++ https://mvcp.tistory.com/entry/%EC%86%90-%EC%BD%94%EB%94%A9-%EB%87%8C-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EB%88%88-%EB%94%94%EB%B2%84%EA%B9%85-%ED%95%98%EA%B4%91%EC%84%B1 
 
 --------
 
