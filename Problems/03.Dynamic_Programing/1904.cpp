@@ -2,7 +2,7 @@
 using namespace std;
 //acmicpc.net/problem/1904
 
-/*
+/*1
 문제명: 01타일
 TL: 0.75s
 ML: 256MB
