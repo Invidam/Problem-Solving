@@ -1,3 +1,47 @@
+---공부해야할 것---
+
+SIPC?
+https://www.codentalks.com/t/topic/3517/8
+https://kldp.org/node/96387
+https://steelbear.tistory.com/70
+https://m.blog.naver.com/PostView.nhn?blogId=dhan71&logNo=60031084088&proxyReferer=https:%2F%2Fwww.google.com%2F
+
+자바의 정석
+
+
+수학
+
+
+영어
+
+
+
+알고리즘
+
+
+웹
+
+DB
+
+
+컴퓨터 사이언스
+
+
+등등 많기도 많다.
+
+
+지금은 그냥 웹 + 알고리즘에 집중하기. 이게 제일 나을듯. (영어도 하는 중이지만)
+
+
+
+
+---사이트---
+
+https://yeogue.tistory.com/
+프로그래밍 관련 사이트의 글들 모아놓음.
+
+
+
 https://l0o02.github.io/2019/06/01/coding-army-2/
 
 https://github.com/mAKEkr/coding-on-ssajibang
@@ -7,4 +51,4 @@ https://github.com/mAKEkr/coding-on-ssajibang
 
 https://medium.com/happyprogrammer-in-jeju/%EA%B0%9C%EC%95%8C%EB%AA%BB%EC%9D%B8-%EB%8B%B9%EC%8B%A0%EC%9D%B4-%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%9C%EB%8B%A4%EB%A9%B4-5-12b7d3e78264
 
-기초지식
+웹ㄱ ㅐ발 관련 기초지식
