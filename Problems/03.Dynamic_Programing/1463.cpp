@@ -16,7 +16,7 @@ G
 
 B
 1 빨리푸느라 조금의 실수가 있었다. (temp 에 1 더하지 않았던 것.)
-2
+2 그밖에, 실수가 잦았는데 눈으로 컴파일링 해보면 나아질 것 같다. (쉬운 예시로 동작한다면 어떻게 될 지 생각하기..)
 3
 
 conceipt: 기본적인 dp 문제.
@@ -32,6 +32,9 @@ TS: 36ms
 MS: 37052KB
 */
 
+#include <iostream>
+#include <algorithm>
+
 int arr[1000001];
 int N;
 
@@ -43,7 +46,7 @@ int solve(int n)
 	int temp = solve(n-1);
 	if(n % 3 == 0)
 		temp = std::min(temp,solve(n/3));
-	else if(n %2 == 0)
+	if(n %2 == 0)
 		temp = std::min(temp,solve(n/2));
 	arr[n] = ++temp;
 	return temp;
@@ -53,8 +56,10 @@ int solve(int n)
 int main()
 {
 	scanf("%d",&N);
-	
 	for(int i=2;i<=N;i++)
 		arr[i] = -1;
+    arr[0] = 0;
+    arr[1] = 0;
+    
 	printf("%d",solve(N));
 }
