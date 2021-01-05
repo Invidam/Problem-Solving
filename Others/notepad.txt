@@ -52,3 +52,12 @@ https://github.com/mAKEkr/coding-on-ssajibang
 https://medium.com/happyprogrammer-in-jeju/%EA%B0%9C%EC%95%8C%EB%AA%BB%EC%9D%B8-%EB%8B%B9%EC%8B%A0%EC%9D%B4-%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%9C%EB%8B%A4%EB%A9%B4-5-12b7d3e78264
 
 웹ㄱ ㅐ발 관련 기초지식
+
+
+
++ https://mvcp.tistory.com/entry/%EC%86%90-%EC%BD%94%EB%94%A9-%EB%87%8C-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EB%88%88-%EB%94%94%EB%B2%84%EA%B9%85-%ED%95%98%EA%B4%91%EC%84%B1 
+	+ 배우고 싶은 사람
++ https://pascucu.tistory.com/category/%EA%B5%AC%EB%A6%84%20IDE%20-%20%EC%9B%B9%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%A7%8C%EB%93%A4%EA%B8%B0
+	+ 구름ide로 웹페이지 연결
++ https://edu.goorm.io/learn/lecture/557/%ED%95%9C-%EB%88%88%EC%97%90-%EB%81%9D%EB%82%B4%EB%8A%94-node-js/lesson/174357/%EC%8B%A4%EC%8A%B5-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95-%EA%B5%AC%EB%A6%84ide
+	+ node.js 강의 (구름ide에서 제공)
