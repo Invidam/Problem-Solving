@@ -66,3 +66,7 @@ https://mvcp.tistory.com/entry/%EC%86%90-%EC%BD%94%EB%94%A9-%EB%87%8C-%EC%BB%B4%
 	+ node.js 강의 (구름ide에서 제공)
 + https://backlog.com/git-tutorial/kr/stepup/stepup1_2.html
 	+ git 교육
+	
++  https://velog.io/@eldpswp99/%EA%B5%AC%EB%A6%84-ide-React-localhost-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0%EB%B0%A9%EB%B2%95-%EC%82%AC%EC%A7%80%EB%B0%A9%20
++ https://edu.goorm.io/learn/lecture/557/%ED%95%9C-%EB%88%88%EC%97%90-%EB%81%9D%EB%82%B4%EB%8A%94-node-js/lesson/21918/repl-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0
+	+ 싸지방 구름 node.js
