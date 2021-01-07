@@ -64,3 +64,5 @@ https://mvcp.tistory.com/entry/%EC%86%90-%EC%BD%94%EB%94%A9-%EB%87%8C-%EC%BB%B4%
 	+ 구름ide로 웹페이지 연결
 + https://edu.goorm.io/learn/lecture/557/%ED%95%9C-%EB%88%88%EC%97%90-%EB%81%9D%EB%82%B4%EB%8A%94-node-js/lesson/174357/%EC%8B%A4%EC%8A%B5-%ED%99%98%EA%B2%BD-%EA%B5%AC%EC%B6%95-%EA%B5%AC%EB%A6%84ide
 	+ node.js 강의 (구름ide에서 제공)
++ https://backlog.com/git-tutorial/kr/stepup/stepup1_2.html
+	+ git 교육
