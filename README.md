@@ -39,6 +39,8 @@
 
 + https://kdh9949.tistory.com/28
 	+ 보고좀배워라..! (┬┬﹏┬┬)
++ https://www.acmicpc.net/board/view/9820
+	+ 추천사이트
 
 --------
 
