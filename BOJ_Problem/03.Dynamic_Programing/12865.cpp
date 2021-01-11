@@ -27,6 +27,8 @@ solution: 물건을 넣었을 때, 넣지 않았을 때로 나누며,  최대 �
 Q1: 풀이 2도 dp라고 봐야하나?
 A1: dp란 문제를 쪼개서 풀며, 그 결과로 주어진 문제를 푸는 것. 즉 dp라고 보기 어렵다고 생각한다.
 https://www.acmicpc.net/board/view/61739 참고
++ dp중에서 바로 직전의 정보만 참고하는 dp도 존재한다. 따라서 dp가 맞다.
+
 
 NEW : 숫자 사이에 '을 넣어 1,000 처럼 표현할 수 있다 (separator이라고 한다.)
 https://en.cppreference.com/w/cpp/language/integer_literal 참고.
