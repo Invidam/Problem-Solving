@@ -16,10 +16,26 @@ Good
 
 Bad
 1. lo선정, while문 조건, 범위에따른 lo또는 hi선정에 실수가 잦았다.
-(low +1 < hi )일 때	-> cout << lo는 [initial lo, initial hi)을 의미함.
-					 -> cout << hi는 (initial lo,initial hi]을 의미함. 
-이번 문제같은 경우는 원하는 조건일 때, hi = mid로 갱신되므로 hi에 원하는 값이 들어가므로
-cout << hi를 사용해야 한다. 또한, (lo,hi]이므로 가능한 범위였던 1~sum 중에 lo는 0, hi는 sum이 들어가야 한다.
+
+방법 1.
+조건	lo + 1 < hi
+참	hi = mid
+거짓	lo = mid
+cout << hi
+: hi 가 ans, lo가 ans-1에 위치.
+: 범위는 (initial lo, initial hi]
+
+방법 2.
+조건	lo <= hi
+참	hi = mid - 1
+거짓	lo = mid + 1
+cout << lo
+: hi가 ans-1 lo = ans에 위치.
+: 범위는 [initial low, inital MAX] ㅇㅎ
+장점 : 범위가 가시성 높으며, 좀더 공격적으로 범위를 줄여나간다.
+
+방법 2가 나은 듯 하다.
+
 2. 
 3. 
 
