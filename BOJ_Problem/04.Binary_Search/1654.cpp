@@ -1,21 +1,24 @@
 #include <iostream>
 using namespace std;
-//acmicpc.net/problem/2343
+//acmicpc.net/problem/1654
 
 /*
-문제명: 기타 레슨
+문제명: 랜선 자르기
 TL: 2s
 ML: 128MB
 
 
 
 Good
-1. 
+1. 잘 응용하여 짧은 시간에 짰다.
 2. 
 3. 
 
 Bad
-1. lo선정, while문 조건, 범위에따른 lo또는 hi선정에 실수가 잦았다.
+1. cnt 작성을 하지 않았다. 출력에 있어 hi가 아닌 lo를 하였다.
+2. 
+3. 
+
 
 방법 1.
 조건	lo + 1 < hi
@@ -39,69 +42,48 @@ cout << lo
 *참이 때의 mid값을  hi or lo중 어디에 넣느냐에 따라 달라지니 이 점도 유의해야한다.
 참일때 low = mid +1  -> cout << hi;
 참일때 high = mid - 1  -> cout << low;
-2. 
-3. 
 
+으로 하자.
 conceipt: 
 solution: 
 Q1: 
 A1: 
 
-NEW :
+NEW : long = long long (in 64bit)
 keypoint: 
 
-TU: 1h40m
-TS: 12ms
-MS: 2048KB
+TU: 48m
+TS: 4ms
+MS: 2056KB
 */
 
-
-int N,M,arr[100'001],sum,ans = 100'000;
-long long mid;
-int lo,hi;
-
+int K,N,arr[10'001];
+long lo=1,hi,mid,cnt;
 int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
+	cin >> K >> N;
 	
-	
-	cin >> N >> M;
-	
-	for(int i=0;i<N;i++)
+	for(int i=0;i<K;i++)
 	{
 		cin >> arr[i];
-		hi += arr[i];
+		hi = hi > arr[i] ? hi : arr[i];	
 	}
-	if(M == 1)
+	
+	
+	while(lo <= hi)
 	{
-		cout << hi;
-		return 0;
-	}
-	while(lo +1 <  hi)
-	{
-		mid = (lo + hi) / 2;
-		int cnt = 0,i;
-		sum = 0;
-		for(i=0;i<N;i++)
-		{
-			if(sum  > mid- arr[i])
-			{
-				sum = 0;
-				i--;
-				if(++cnt >= M)
-					break;
-				
-				continue;
-			}
-			else
-				sum += arr[i];
-		}
-		if(i == N)
-			hi = mid;
+		cnt = 0;
+		mid = (lo + hi) /2;
+		for(int i=0;i<K;i++)
+			cnt+= (arr[i]/mid);
+		
+		if(cnt >= N)
+			lo = mid +1;
 		else
-			lo = mid;
+			hi = mid - 1;
 	}
+	
 	cout << hi;
 }
-

@@ -3,7 +3,7 @@ using namespace std;
 //acmicpc.net/problem/6236
 
 /*
-문제명: 예산
+문제명: 용돈관리
 TL: 1s
 ML: 128MB
 
@@ -50,7 +50,7 @@ int main()
 		if(hi < arr[i])
 			hi = arr[i];
 	}
-	hi *=N;
+	
 	if(M == 1)
 	{
 		for(int i=0;i<N;i++)
