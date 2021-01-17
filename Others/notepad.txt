@@ -32,7 +32,14 @@ DB
 
 지금은 그냥 웹 + 알고리즘에 집중하기. 이게 제일 나을듯. (영어도 하는 중이지만)
 
+--사려는 책드
+http://www.yes24.com/Product/Goods/24259565
++ 자바의 정석
+http://www.yes24.com/Product/Goods/1778966?OzSrank=1
++ 디자인 패턴	
 
+https://hyun1205.tistory.com/10 
++ 책추천
 
 
 ---사이트---
@@ -74,4 +81,4 @@ https://mvcp.tistory.com/entry/%EC%86%90-%EC%BD%94%EB%94%A9-%EB%87%8C-%EC%BB%B4%
 	
 	
 + https://drive.google.com/file/d/0B-tD535n_rOfX1Iwa0RBRU9VWGM/view
-	+ 웹 커리큘럼
+	+ 웹 커리큘럼ㅎ
