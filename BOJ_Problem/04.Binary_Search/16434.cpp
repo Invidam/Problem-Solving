@@ -13,14 +13,14 @@ ML: 256MB
 
 Good
 1. 함수로 나누어 풀었다.
-2. 
-3. 
+2. 구조체 사용.
+3. 구현에 막힌 게 별로 없었다.
 
 Bad
 1. 내 코드를 잘 이해하지 못하였다. 1~hi까지 이동하기에, 0은 ans가 될 수 없다.
 2. 문제를 잘 이해하지 못하였다. 문제 표현이 부정확한 것도 있지만, 의도파악을 잘 못한 것 같다. (A 혹은 B인 경우 A일 때와 B일 때 2개 다 고려해서 문맥상 옳은 것을 고르자.)
 3. 굳이 이분탐색이 아니어도 풀 수 있다고 생각한다.(던전을 돌며 소비되는 피의 양+1 이 max_hp이다. 이러한 경우 배열 선언을 안해도 된다.)
-4. 자료형 크기 int = long = 2^31 // long long = 2^63 이다. 
+4. 자료형 크기 int = long = 2^31 // long long = 2^63 이다. <-- 이것을 몰라 시간소요가 컷다.
 
 conceipt: 
 solution: 
@@ -109,10 +109,8 @@ int main()
 #include <iostream>
 using namespace std;
 typedef long long ll;
-
 ll atk,cur,mx;
-int i, N, t,a,h;
-
+int N,t,a,h;
 int main()
 {
 	ios_base::sync_with_stdio(false);
@@ -123,14 +121,15 @@ int main()
 		cin >> t >> a >> h;
 		if(t==1)
 		{
-			ll dmg = a*((h/atk) - h%atk ? 0 : 1);
+			ll dmg = a*((h/atk) - ((h%atk) ? 0 : 1));
            
             if(dmg > cur)
             {
-                mx += dmg-curr;
-                curr = 0;
+                mx += (dmg-cur);
+                cur = 0;
             }
-			else cur -= dmg;
+			else 
+                cur -= dmg;
 		}
 		else
 		{
