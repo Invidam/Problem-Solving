@@ -1,6 +1,40 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
+//acmicpc.net/problem/1300
+
+/*
+문제명: K번째 수
+TL: 2s
+ML: 128MB
+
+
+
+Good
+1. 잘못된 방법이었지만 그대로 잘 진행해나갔다.
+2. 
+3. 
+
+Bad
+1. 구상이 안떠올랐다. 특정수가 몇번째 인지 or 특정 번째 수가 몇인지 를 알아내야 한다는 것을 알고있음에도 떠오르지 않았다.
+-> 묘수를 찾으려 하지말고(대각선 방법), 기존 시간복잡도가 큰 문제에서 어떻게하여 줄일 것인지를 고민하자.
+또한 떠오른 구상이 올바른지 확인하는 작업에 시간을 좀 더 투자해야 한다.
+2. 
+3. 
+
+conceipt: 
+solution: 
+Q1: 
+A1: 
+
+NEW :
+keypoint: 
+
+TU: 2d
+TS: 28ms
+MS: 2016KB
+*/
+
 typedef long long ll;
 int N,K;
 ll cnt,lo,hi,mid;
@@ -12,53 +46,24 @@ int main()
 	
 	cin >> N >> K;
 	lo =1;
-	hi =N;
+	hi =(ll)N*N;
+	/*
+	mid라는 수보다 작은 수가 몇개 있는지 구하자 = cnt.
+	*/
 	while(lo <= hi)
 	{
 		mid = lo + hi >> 1;
-		cnt = 0;
-		if(2*mid-1 <= N)
-			cnt = 2*mid*(2*mid-1)/2;
-		else
-			cnt =  N*N -(2*N - (2*mid-1))*(2*N - (2*mid-1) -1)/2;
-
-		if(cnt >= K )
-			hi = mid -1;
-		else
-			lo = mid + 1;
-	}
-	int B[200'001] = {0,};
-	//cout <<"lo :" <<lo <<"idx :";
-	int idx = 2*lo -1 <= N ? 4*lo -3 :   4*(N - lo)+3;
-	
-	for(int i=0;i<idx;i++)
-	{
-		if(2*lo -1 <= N)
+		ll cnt = 0;
+		for(int i=1;i<=N;i++)
 		{
-			if(i < idx/2)
-				B[i] = (idx/2-i)*(i+1);
-			else
-				B[i] = (2*lo - i + idx/2-1)*(i -idx/2+1);
+			cnt += mid / i  >= N ? N : mid/i;
+			if(cnt > K)
+				break;
 		}
+		if(cnt >= K)
+			hi = mid - 1;
 		else
-		{
-			if(i < idx/2)
-				B[i] = (N - i)*(2*lo - N + i);
-			else
-				B[i] = (2*lo- i)*(i-1);
-		}
-		//cout << "i :" << i << "val :" << B[i] << "v2 : "<<(2*lo   - i ) << "v3 :" << (i-1) <<'\n';
+			lo = mid +1;
 	}
-	sort(B,B+idx,greater<int>());
-	//sort(B,B+idx);
-	//cout << cnt - K << '\n';
-	cout << B[cnt-K];
-	
+	cout << lo;
 }
-// 	if(lo <= N)
-// 		cnt = lo*(lo+1)/2;
-// 	else
-// 		cnt = (ll)N * N - ((2*N - lo)*(2*N -lo - 1))/2;
-		
-// 	cout << (((lo-(cnt-K))+1)/2) * ((lo+ (cnt-K))/2 +1);
-// }
