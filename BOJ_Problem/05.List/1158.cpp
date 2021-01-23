@@ -18,8 +18,7 @@ Good
 Bad
 1. erase 함수등의 시간복잡도를 잘 몰라 조금 헷갈리게 코드를 작성하였다. -> erase : O(K)이다.
 2. erase함수 사용시 itr = erase(itr) or erase(itr++) 로 작성해야 한다.
-3. 코드 작성 시 문제가 생기더라도 내적으로든 외적으로든 해결하려고 노력해야 한다.
-4. 너무 몰입하지 말자.
+3. while {조정->제거 } 이었는데, 마지막 원소를 제거하였을 때 조정이 되지 않아 오류가 생겼었다. 제거 후 어떻게 될지 생각해보아야 한다.
 
 conceipt: 
 solution: 
@@ -63,6 +62,8 @@ int main() {
 		cout << *itr << ", ";
 		itr = l.erase(itr);
 	}
+	if(itr == l.end())
+		itr = l.begin();
 	
 	cout << *itr << ">";
 	
