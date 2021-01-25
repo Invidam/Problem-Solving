@@ -183,6 +183,7 @@ void showstack(stack<T> &s) {
 int main() {
 	
 	stack<int> s;
+	s.
 	showstack(s);
 	cout << s;
 	showstack(s);
