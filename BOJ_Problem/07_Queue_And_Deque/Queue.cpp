@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <queue>
 using namespace std;
 
 
@@ -52,6 +53,17 @@ public:
 			exit(1);
 		}
 	}
+	T rear(){
+		try{
+			if(size ==0) 
+				throw out_of_range("UnderflowException");
+			return tail->value;
+		}
+		catch(out_of_range& e) {
+			cerr << "UnderflowException";
+			exit(1);
+		}
+	}
 	
 	void pop(){
 		try{
@@ -86,20 +98,64 @@ ostream& operator<<(ostream& o,const Queue<T>& QQ)
 	o << "]rear\n";
 	return o;
 }
+/*
 
+template <typename T>
+ostream& operator<<(ostream& o, Stack<T>& S) {
+	ListNode<T> *temp = S.tail;
+	o << "top [";
+	for(int i=0;i<S.size;i++) {
+		o << temp->value;
+		temp = temp->next;
+		if(i != S.size -1)
+			o <<", ";
+	}
+			o << "]bottom";
+	return o;
+		
+}
+*/
+template<typename T>
+ostream& operator<<(ostream& o,queue<T> q)
+{
+	o << "front [";
+	while(!q.empty())
+	{
+		o << q.front();
+		q.pop();
+		if(q.size() != 0)
+			o <<", ";
+	}
+	o << "]rear\n";
+	return o;
+}
 int main() {
 	
 	Queue<int> q;
 	q.push(1);
 	q.push(2);
 	q.push(3);
+	cout << q.front() << '\n';
+	cout << q.rear() << '\n';
 	cout << q;
 	q.pop();
 	q.push(4);
+	cout << q.front() << '\n';
+	cout << q.rear() << '\n';
 	q.pop();
 	q.pop();
 	q.pop();
 	cout << q;
 	
-	
+	queue<int> qq;
+	qq.push(1);
+	qq.push(2);
+	cout << qq.front();
+	cout << qq.back();
+	cout << qq;
+	qq.push(3);
+	qq.pop();
+	cout << qq.front();
+	cout << qq.back();
+	cout << qq;
 }
