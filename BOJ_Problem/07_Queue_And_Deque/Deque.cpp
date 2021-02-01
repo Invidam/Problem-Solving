@@ -12,7 +12,7 @@ public:
 	ListNode<T>* next;
 	ListNode<T>* prev;
 	
-	ListNode<T>() : next(nullptr) prev(nullptr){}
+	ListNode<T>() : next(nullptr) , prev(nullptr){}
 	ListNode<T>(T v1, ListNode<T>* n1,ListNode<T>* n2) : value(v1) , next(n1),prev(n2) {}	
 };
 
@@ -22,7 +22,7 @@ public:
 	int size;
 	ListNode<T> *head, *tail; // head 역할
 	
-	Deueue<T>() : size(0), head(nullptr), tail(nullptr) {}
+	Deque<T>() : size(0), head(nullptr), tail(nullptr) {}
 
 	~Deque<T>(){
 		ListNode<T> *t1 = head, *t2;
@@ -112,6 +112,23 @@ public:
 		
 	}
 };
+
+template<typename T>
+ostream& operator<<(ostream& o,deque<T> dq)
+{
+	o << "front [";
+	for(auto& elem : dq)
+	{
+		o << elem;
+		if(elem != dq.back())
+			o << ", ";
+	}
+	
+	
+	o << "]rear\n";
+	return o;
+}
+/*
 template <typename T>
 ostream& operator<<(ostream& o,const Deque<T>& DQ)
 {
@@ -127,7 +144,6 @@ ostream& operator<<(ostream& o,const Deque<T>& DQ)
 	o << "]rear\n";
 	return o;
 }
-/*
 
 template <typename T>
 ostream& operator<<(ostream& o, Stack<T>& S) {
@@ -158,9 +174,10 @@ ostream& operator<<(ostream& o,queue<T> q)
 	o << "]rear\n";
 	return o;
 }
+
 */
 int main() {
-	Deque<int> dq;
+	deque<int> dq;
 	dq.push_back(1);
 	cout << dq;
 	dq.push_back(2);
@@ -169,4 +186,5 @@ int main() {
 	cout << dq;
 	dq.push_front(5);
 	cout << dq;
+	//dequ
 }
