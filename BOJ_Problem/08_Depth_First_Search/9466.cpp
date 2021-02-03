@@ -203,3 +203,112 @@ int main()
 		
 	}
 }
+
+/*
+문제에 따라 가지고있던 그래프를 변형시켜 해결한 경우. 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+bool cycle[100'001] = {false,};
+bool cantcycle[100'001] = {false,};
+bool visited[100'001] = {false,};
+int adj[100'001] = {0,};
+
+void dfs(int curr,int N)
+{
+	
+	if(adj[curr] == curr)
+	{
+		visited[curr] = true;
+		cycle[curr] = true;
+		return;
+	}
+
+	vector<int> stack;
+	stack.push_back(curr);
+	for(int i=1;i<N+1;i++)
+	{
+		visited[stack.back()] = true;
+		stack.push_back(adj[stack.back()]);
+		//cout << stack.back() <<" -> ";
+		if(stack.back() == stack.front())
+		{
+			while(!stack.empty())
+			{
+				cycle[stack.back()] = true;
+				stack.pop_back();
+			}
+			return;
+		}
+		if(cycle[stack.back()] || cantcycle[stack.back()])
+		{
+			stack.pop_back();
+			while(!stack.empty())
+			{
+				cantcycle[stack.back()] = true;
+				stack.pop_back();
+			}
+			return;
+		}
+		if(visited[stack.back()] == true)
+		{
+			int temp = stack.back();
+			cycle[temp] = true;
+			stack.pop_back();
+			while(stack.back() != temp)
+			{
+				cycle[stack.back()] = true;
+				stack.pop_back();
+			}
+			stack.pop_back();
+
+			while(!stack.empty())
+			{
+				cantcycle[stack.back()] = true;	
+				stack.pop_back();
+			}
+			return;
+		}
+	}
+	return;
+}
+
+int main() 
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int TC;
+	cin >> TC;
+	while(TC--)
+	{
+		int n,input_num,ans = 0;
+		cin >> n;
+		
+		fill(cycle,cycle + n+1,false);
+		fill(cantcycle,cantcycle + n+1,false);
+		fill(visited,visited + n+1,false);
+		fill(adj,adj + n+1,0);
+		
+		for(int i=0;i<n;i++) 
+		{
+			cin >> input_num;
+			adj[i] = input_num-1;
+			
+		}
+		for(int i=0;i<n;i++)
+			if(!visited[i]) dfs(i,n);
+		
+		for(int i=0;i<n;i++)
+			if(cantcycle[i]) ans++;
+		
+		cout << ans << '\n';
+	}
+}
+	
+	
+	
+
+*/
