@@ -35,7 +35,7 @@ MS: 2248KB
 
 int N,T,G;
 const int MAX_RANGE = 99'999;
-bool visited[100'000];
+int visited[100'000];
 
 int bfs()
 {
