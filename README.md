@@ -1,92 +1,33 @@
 # 알고리즘 문제풀이 업로드를 위한 Repo입니다.
++ BOJ_Problem
+	+ kks227님의 블로그에 수록된 문제들을 풀었던 코드들 입니다. (BFS까지 완료 후.)
 
-
++ JMBook
+	+ 프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략(구종만 저)에 수록된 문제들을 푸는 코드들 입니다. (진행 중.)
 
 
 
 ## 내 사이트들
++ https://github.com/Invidam/Problem-Solving
+	+ 깃헙
+	
++ https://algospot.com/user/profile/140120
+	+ 알고스팟
+	
 + https://www.acmicpc.net/user/anacoluthon
-
-
-
-
-+ https://github.com/Invidam/Goorm_Ide
-
-
------------------------------
-
+	+ 백준
 
 ## 참고용 사이트들
-+ https://gist.github.com/ihoneymon/652be052a0727ad59601
-	+ 마크다운 사용법
-	
-	
-	
-* https://www.acmicpc.net/problem/4796
-	+ 백준 푸는 문제들
-	
-	
+
++ https://book.algospot.com/problems.html
+	+ 종만북 수록된 문제들
 	
 + https://blog.naver.com/kks227/220785731077
 	+ https://www.acmicpc.net/workbook/view/3755
-	+ kks227님의 블로그와 그에 관한 문제들
+	+ kks227님의 블로그와 그에 관한 문제들	
 	
-	
-	
-+ https://studioplug.tistory.com/342
-	+ 구름 백준 연동법
-	
-
 + https://kdh9949.tistory.com/28
 	+ 보고좀배워라..! (┬┬﹏┬┬)
+	
 + https://www.acmicpc.net/board/view/9820
 	+ 추천사이트
-
---------
-
-
-## <기초 용어 설명>
-+ "commit" : 깃허브로 코드를 보내기 위한 준비과정(버전을 만드는 것)
-
-
-
-
-+ "push"	: 커밋으로 준비된 코드를 깃허브에 업로드하는 과정
-
-
-
-## <필요한 명령어 모음>
-+ git status   
-	+ 빨간 파일들은 수정안된 파일들
-	+ 초록 파일들은 수정이 완료된 파일들
-
-
-
-
-+ git add <파일명>
-	+ 빨강 -> 초록 
-	+ 커밋을 할 준비
-
-
-
-
-+ git commit -m <파일명 >"커밋 메세지"
-	+ 상위 폴더를 지정하면 하위 파일들도 지정된다.
-	
-	
-	
-	
-+ git rm <파일명> 
-	+ 파일 삭제
-	
-	
-	
-	
-+ git push
-
-
-
-+ gut pull
-	+ 깃헙->구름으로 가져오기
-	
-	
