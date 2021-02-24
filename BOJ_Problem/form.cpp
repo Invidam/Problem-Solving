@@ -1,31 +1,37 @@
-//acmicpc.net/problem/
+//algospot.com/judge/problem/read/FESTIVAL
 
 /*
 문제명: 
-TL: s
-ML: MB
+TL:0s
+ML: 64MB
 
+TU: 40m
+TS: 40ms
+MS: 779KB
 
 
 Good
 1. 
-2. 
-3. 
 
 Bad
 1. 
-2. 
-3. 
 
-conceipt: 
-solution: 
+IAN
+1.
+
+NEW
+1. 
+
+
 Q1: 
 A1: 
 
-NEW :
-keypoint: 
 
-TU: m
-TS: ms
-MS: KB
+Solution:
+
+Approach: 
+
+Clue:
+
+Reconstruction : 
 */
