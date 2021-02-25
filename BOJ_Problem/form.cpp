@@ -1,13 +1,13 @@
-//algospot.com/judge/problem/read/FESTIVAL
+//algospot.com/judge/problem/read/
 
 /*
 문제명: 
-TL:0s
-ML: 64MB
+TL:s
+ML: MB
 
-TU: 40m
-TS: 40ms
-MS: 779KB
+TU: m
+TS: ms
+LEN: KB
 
 
 Good
@@ -35,3 +35,4 @@ Clue:
 
 Reconstruction : 
 */
+
