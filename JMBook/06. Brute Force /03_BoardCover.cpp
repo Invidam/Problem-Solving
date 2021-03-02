@@ -10,6 +10,11 @@ using namespace std;
 TL: 2s
 ML: 64MB
 
+-jm-
+TU 30m
+TS 0ms
+LEN: 1.5kb
+-my-
 TU: 1h
 TS: 4ms
 LEN: 1.4KB
@@ -46,8 +51,94 @@ Clue:
 
 Reconstruction : 
 */
+int offset[4][3][2] =
+{
+	{{0,0},{1,0},{0,1}},
+	{{0,0},{0,1},{1,1}},
+	{{0,0},{1,0},{1,1}},
+	{{0,0},{1,0},{1,-1}}
+};
 
+bool setBoard(vector<vector<int> >& board,int y, int x , int coverType, int delta)
+{
+	bool ok = true;
+	for(int i=0;i<3;i++)
+	{
+		int yoff = y + offset[coverType][i][0];	
+		int xoff = x + offset[coverType][i][1];
+		
+		if(yoff <0 || yoff >= board.size() || xoff < 0 || xoff >= board[0].size())
+			ok = false;
+		else if((board[yoff][xoff] += delta) > 1) // 검은 색이거나 이미 덮여있는 경우
+			ok = false;
+	}
+	return ok;
 
+}
+
+int coverWhite(vector<vector<int> >& board)
+{
+	int ret = 0,y= -1, x = -1;
+	
+	for(int i=0;i<board.size();i++)
+	{
+		for(int j=0;j<board[i].size();j++)
+		{
+			if(board[i][j] == 0)
+			{
+				y = i;
+				x = j;
+				break;
+			}
+		}
+		if(y != -1)
+			break;
+	}
+	
+	if(y == -1) // 기저사례: 흰색을 찾지못함
+		return 1;
+	
+	for(int coverType = 0; coverType<4; ++coverType)
+	{
+		if(setBoard(board,y,x,coverType,1)) // 추가
+			ret += coverWhite(board);
+		setBoard(board,y,x,coverType,-1); // 다시 제거한다.
+	}
+	
+	return ret;
+}
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int TC,H,W;
+	cin >> TC;
+	
+	while(TC--)
+	{
+		cin >> H >> W;
+		
+		char c;
+		vector<vector<int> > board(H,vector<int>(W));
+		for(int i=0;i<H;i++)
+		{
+			for(int j=0;j<W;j++)
+			{
+				cin >> c;
+				
+				if(c == '.')
+					board[i][j] = 0;
+				else
+					board[i][j] = 1;
+			}
+		}
+		cout << coverWhite(board) << '\n';
+	}
+}
+
+/*
 typedef pair<int, int> p;
 int TC,H,W;
 struct cmp {
@@ -140,3 +231,4 @@ int main()
 		cout << coverWhite(whiteList) << '\n';
 	}
 }
+*/
