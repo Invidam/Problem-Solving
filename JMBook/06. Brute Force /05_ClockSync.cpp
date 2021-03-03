@@ -43,8 +43,83 @@ Clue: 시계라는 특성을 이용한 주기성.(기저사례가 제시)
 Reconstruction : 
 */
 
+//종만북 풀이 TS:  1440ms Len : 1.5kb
+const int INF = 987654321, SWITCHES = 10, CLOCKS = 16;
+const char linked[SWITCHES][CLOCKS+1] = {
+  "xxx.............",
+  "...x...x.x.x....",
+  "....x.....x...xx",
+  "x...xxxx........",
+  "......xxx.x.x...",
+  "x.x...........xx",
+  "...x..........xx",
+  "....xx.x......xx",
+  ".xxxxx..........",
+  "...xxx...x...x.."};
+	
+void push(vector<int>& clockList, int switchNum)
+{
+	for(int clockIndex=0;clockIndex<CLOCKS;clockIndex++)
+	{
+		char clockChar = linked[switchNum][clockIndex];
+		if(clockChar == '.')
+			continue;
+		
+		clockList[clockIndex] += 3;
+		if(clockList[clockIndex] > 12)
+			clockList = 3;
+	}
+}
 
+bool areAligned(vector<int>& clockList)
+{
+	bool ret =true;
+	for(int i=0;i<16;i++)
+		if(clockList[i] != 12) ret = false;
+	return ret;
+}
 
+int solve(vector<int>& clockList,int currSwitch)
+{
+	
+	if(currSwitch == SWITCHES) return areAligned(clockList) ? 0 : INF;
+	
+	int ret = INF;
+	
+	for(int i=0;i<4;i++)
+	{
+		int ans = syncClock(clockList,currSwitch + 1) + i;
+		ret = ret < ans ? ret : ans;
+		push(clockList,currSwitch);
+	}
+	return ret;
+	
+}
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int TC;
+	cin >> TC;
+	
+	while(TC--)
+	{
+		vector<int> clockList(16);
+		for(int i=0;i<16;i++)
+			cin >> clockList[i];
+		
+		int ans = syncClock(clockList,0);
+		if(ans == INF)
+			cout << "-1\n";
+		else
+			cout << ans << '\n';
+	}
+}
+
+/*
 const int INF = 987654321;
 int modifyList[10][5] = {
 {0, 1, 2,-1,-1},
@@ -131,3 +206,4 @@ int main()
 			cout << ans << '\n';
 	}
 }
+*/
