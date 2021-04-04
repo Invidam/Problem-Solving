@@ -116,13 +116,8 @@ int main() {
 	
 	LinkedList<int> LL;
 	LL.insert(0,1);
+	LL.insert(1,5);
+	LL.insert(1,7);
 	cout << LL;
-	LL.insert(1,2);
-	cout << LL;
-	LL.insert(2,7);
-	LL.erase(2);
-	cout << LL;
-	
-	cout << LL.search(7);
 	
 }
