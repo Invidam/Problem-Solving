@@ -82,7 +82,35 @@ bool isPair(string& str)
 	
 	return express.empty();
 }
-
+bool isPair2(const string& str)
+{
+	if(str.empty()) return 1;
+	if(str.size()%2 == 1) return 0;
+	
+	const string opening("([{"),closing(")]}");
+	
+	stack<char> express;
+	
+	for(int i=0;i<str.length();++i)
+	{
+		if(opening.find(str[i]) != -1)
+		{
+			express.push(str[i]);
+		}
+		else 
+		{
+			if(express.empty())
+				return false;
+			
+			if(opening.find(express.top()) != closing.find(str[i])) 
+				return false;
+			
+			express.pop();
+		}
+	}
+	
+	return express.empty();
+}
 int main()
 {
 	ios_base::sync_with_stdio(false);
@@ -96,7 +124,7 @@ int main()
 	{
 		string str;
 		cin >> str;
-		int ans = isPair(str);
+		bool ans = isPair2(str);
 		if(ans) 
 			cout << "YES\n";
 		else 
