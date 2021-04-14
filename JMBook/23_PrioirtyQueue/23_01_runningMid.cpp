@@ -1,4 +1,83 @@
 #include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+const int MOD = 20090711, BEGINNING_SEED = 1983;
+
+struct RNG
+{
+	int seed,a, b;
+	RNG(int a,int b): a(a), b(b), seed(BEGINNING_SEED) {}
+	
+	int next()
+	{
+		int ret = seed;
+		seed = (seed * (long)a + b)  % MOD;
+
+		return ret;
+	}
+};
+
+int getMedianSum(int N,int a,int b)
+{
+	RNG rng(a,b);
+	priority_queue<int,vector<int>,less<int>> maxHeap;
+	priority_queue<int,vector<int>,greater<int>> minHeap;
+	int ret = 0;
+	
+	while(N--)
+	{
+		if(maxHeap.size() == minHeap.size())
+			maxHeap.push(rng.next());
+		else
+			minHeap.push(rng.next());
+		
+		if(!minHeap.empty())
+		{
+			a = maxHeap.top();
+			b = minHeap.top();
+
+			if(a > b)
+			{
+				maxHeap.pop();
+				minHeap.pop();
+
+				maxHeap.push(b);
+				minHeap.push(a);
+			}
+		}
+		ret += maxHeap.top();
+		ret %= MOD;
+	}
+	
+	return ret;
+	
+	return ret;
+}
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int TC,N,a,b;
+	
+	cin >> TC;
+	
+	while(TC--)
+	{
+		cin >> N >> a >> b;
+		cout << getMedianSum(N,a,b) << '\n';
+	}
+}
+
+/*
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
 #include <cstdlib>
 using namespace std;
 
@@ -110,19 +189,6 @@ Node* erase(Node* root,keyType key)
 	return root;
 }
 
-void print_node(Node* node)
-{
-	cout << node->key << "(" << node->priority << ")\n";
-}
-void print_tree(Node* root, int depth)
-{
-	if(root == NULL) return;
-	cout << "==" << depth << "==\n";
-	print_node(root);
-	print_tree(root->left, depth + 1);
-	print_tree(root->right,depth +1);
-}
-
 Node* kth(Node* root,int k)
 {
 	if(k > root->size) return new Node(-1);
@@ -145,29 +211,57 @@ int countLessThan(Node* root, keyType key)
 	return ls + 1 + countLessThan(root->right,key);
 }
 
+const int MOD = 20090711, BEGINNING_SEED = 1983;
+
+struct RNG
+{
+	int seed,a, b;
+	RNG(int a,int b): a(a), b(b), seed(BEGINNING_SEED) {}
+	
+	int next()
+	{
+		int ret = seed;
+		seed = (seed * (long)a + b)  % MOD;
+
+		return ret;
+	}
+};
+
+int getMedianSum(int N,int a,int b)
+{
+	RNG rng(a,b);
+	Node* root = NULL;
+	int sum = 0;
+	
+	for(int i=0;i<N;++i)
+	{
+		root = insert(root,rng.next());
+		int med = (i)/2 + 1;
+		
+		sum += kth(root,med)->key;
+		sum %= MOD;
+	}
+	
+	return sum;
+}
+
 int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
 	
-	Node* root = NULL;
+	int TC,N,a,b;
 	
-	//insert TestCase
-	for(int i=0;i<=10;++i)
-		root = insert(root,i);
+	cin >> TC;
 	
-	print_tree(root,0);
-	
-	//cLT TestCase
-	cout << "clt" << countLessThan(root,6) << '\n';
-	
-	//erase TestCase
-	root = erase(root,4);
-	root = erase(root,5);
-	print_tree(root,0);
+	while(TC--)
+	{
+		cin >> N >> a >> b;
+		cout << getMedianSum(N,a,b) << '\n';
+	}
 	
 	
-	//kth TestCase
-	print_node(kth(root,4));
 }
+*/
+
