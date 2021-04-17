@@ -36,6 +36,8 @@
 		+ 공부론 자료
 	+ https://github.com/Gyubin/TIL/blob/master/ETC/how_to_study_programming.md
 		+ 지속적 노력 관련 공부방법
+	+ https://m.blog.naver.com/kojosun2333/221508486916
+		+ 삼봉.
 
 + SIPC
 	+ https://www.codentalks.com/t/topic/3517/8
