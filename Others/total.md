@@ -13,7 +13,7 @@
 + 백엔드 
 	+ https://github.com/Invidam/Problem-Solving/blob/main/Others/Back_End.md
 		+ 설명
-		
+	
 	+ https://github.com/Invidam/Problem-Solving/blob/main/Others/Plan.md
 		+ 나의 계획
 	+ https://medium.com/happyprogrammer-in-jeju/%EA%B0%9C%EC%95%8C%EB%AA%BB%EC%9D%B8-%EB%8B%B9%EC%8B%A0%EC%9D%B4-%EC%9B%B9%EA%B0%9C%EB%B0%9C%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%9C%EB%8B%A4%EB%A9%B4-5-12b7d3e78264
@@ -51,6 +51,8 @@
 	
 + 여러 글들 정리한 사이트
 	+ https://yeogue.tistory.com/
+	+ https://www.notion.so/IT-A-to-Z-By-1e1fbc981b7c4c03ac44943085ac8304
+	+ https://medium.com/graphql-seoul/%EA%B0%9C%EB%B0%9C-%EC%A3%BC%EB%8B%88%EC%96%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EA%B3%B5%EB%B6%80%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-677b58e4111d
 
 + 군 관련
    + https://l0o02.github.io/2019/06/01/coding-army-2/
@@ -107,3 +109,8 @@
 	+ https://sokhm.khan.kr/104
 
 ## 기타
++ https://frontmulti.tistory.com/65
+	+ 시간재는 사이트.
++ https://m.blog.naver.com/yyduk/221944149709
++ https://m.blog.naver.com/PostView.nhn?blogId=ej5811&logNo=80102524536&proxyReferer=https:%2F%2Fwww.google.com%2F
+	+ 전산학 공부 이유
