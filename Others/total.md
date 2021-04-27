@@ -38,6 +38,8 @@
 		+ 지속적 노력 관련 공부방법
 	+ https://m.blog.naver.com/kojosun2333/221508486916
 		+ 삼봉.
+	+ https://covenant.tistory.com/100?category=773722
+		+ 전산학 공부 책, 강의 추천.
 
 + SIPC
 	+ https://www.codentalks.com/t/topic/3517/8
