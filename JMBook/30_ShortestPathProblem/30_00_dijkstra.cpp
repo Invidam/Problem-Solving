@@ -22,7 +22,11 @@ vector<int> dijkstra(int src)
 		int cost = -pq.top().first;
 		pq.pop();
 		
-		if(dist[here] < cost) continue;
+		if(dist[here] < cost)
+		{
+			cout << "here: " << here << '\n';
+			continue;
+		}
 		for(int i=0;i<adj[here].size();++i)
 		{
 			int there = adj[here][i].first;
@@ -71,7 +75,11 @@ vector<int> dijkstra_except_pq(int src)
 
 			//dist[there]이 방문하지 않은 정점들보다 가장 작을 때, 진행해봤자 의미가 없을 때
 			//이미 자신보다 멀리 떨어진 정점들밖에 없어, 위 반복문을 통해 방문이 되었을 때
-			if(visited[there]) continue;
+			if(visited[there])
+			{
+				cout << "=\n=\n=\n";
+				continue;
+			}
 
 			int nextDist = closet + adj[here][i].second;
 			if(dist[there] > nextDist)

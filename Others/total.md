@@ -24,6 +24,8 @@
 		+ 로드맵
 	+ https://velog.io/@city7310/%EB%B0%B1%EC%97%94%EB%93%9C%EA%B0%80-%EC%9D%B4%EC%A0%95%EB%8F%84%EB%8A%94-%ED%95%B4%EC%A4%98%EC%95%BC-%ED%95%A8-1.-%EC%BB%A8%ED%85%90%EC%B8%A0%EC%9D%98-%EB%8F%99%EA%B8%B0%EC%99%80-%EA%B0%9C%EC%9A%94
 		+ 알아야 할 것들
+	+ https://okky.kr/article/829205?note=2167779
+		+ f.w 정리
 + 공부론
 	+ 
 	+ https://github.com/Gyubin/TIL/blob/master/ETC/how_to_study_programming.md
@@ -39,6 +41,7 @@
 	+ https://m.blog.naver.com/kojosun2333/221508486916
 		+ 삼봉.
 	+ https://covenant.tistory.com/100?category=773722
+		+ https://covenant.tistory.com/103
 		+ 전산학 공부 책, 강의 추천.
 
 + SIPC
