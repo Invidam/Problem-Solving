@@ -2,30 +2,38 @@
 
 /*
 문제명: 
-TL: s
-ML: MB
+TL: 
+ML: 
 
+TU: 
+TS: 
+LEN: 
 
 
 Good
 1. 
-2. 
-3. 
 
 Bad
 1. 
-2. 
-3. 
 
-conceipt: 
-solution: 
+IAN
+1. 
+NEW
+1. 
+
+
 Q1: 
 A1: 
 
-NEW :
-keypoint: 
 
-TU: m
-TS: ms
-MS: KB
+Solution: 
+1.
+
+Approach: 
+1.
+
+Clue:
+1.
+
+Reconstruction : 
 */

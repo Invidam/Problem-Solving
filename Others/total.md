@@ -8,6 +8,8 @@
 		+ 손뇌눈
 	+ https://plzrun.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4PS-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0
 		+ 알고리즘 공부방법
+	+ https://codeforces.com/blog/entry/74684?fbclid=IwAR0l3WMcN6WOIcSheQN62xjCy4en7WCDsE6MoWkLhewN0QsmMDGTukJDwyw
+		+ c++ tips
 	
 
 + 백엔드 
@@ -119,3 +121,5 @@
 + https://m.blog.naver.com/yyduk/221944149709
 + https://m.blog.naver.com/PostView.nhn?blogId=ej5811&logNo=80102524536&proxyReferer=https:%2F%2Fwww.google.com%2F
 	+ 전산학 공부 이유
++ randomClassicMusic
+	+ https://classicalmusiconly.com/work/ludwig-van-beethoven/symphony-no-9-op-125-m6n9/tv

@@ -19,4 +19,6 @@
 		+ 당근마켓보고 사기.
 		+ http://prod.danawa.com/info/?pcode=13545398&keyword=%EB%85%B8%ED%8A%B8%EB%B6%81&cate=112758#bookmark_cm_opinion
 		
-	+ https://codeforces.com/blog/entry/74684?fbclid=IwAR0l3WMcN6WOIcSheQN62xjCy4en7WCDsE6MoWkLhewN0QsmMDGTukJDwyw
++ 무선이어폰
+	+ QCY 5s
+		+ https://url.kr/pfhgv1
