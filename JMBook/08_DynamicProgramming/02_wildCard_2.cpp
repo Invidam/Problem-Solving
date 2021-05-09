@@ -19,6 +19,7 @@ bool match(int w, int f)
 	if(ret != -1) return ret;
 	char& wc = wildCard[w], fc = fileName[f];
 	
+	if(f == fn) cout << "Fc: " << fc << '\n';
 	if(wc == fc || wc == '?') return ret = match(w+1,f+1);
 	else if(wc == '*') return ret = (match(w,f+1) || match(w+1,f));
 	else return ret = 0;
