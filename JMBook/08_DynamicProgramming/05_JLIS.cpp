@@ -3,7 +3,7 @@
 #include <cstring>
 #include <algorithm>
 using namespace std;
-
+//324ms
 int N1,N2, cache[501][501];
 vector<int> arr1(501),arr2(501);
 int LIS(int s1,int s2)
