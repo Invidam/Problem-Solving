@@ -25,9 +25,5 @@
 + https://blog.naver.com/kks227/220785731077
 	+ https://www.acmicpc.net/workbook/view/3755
 	+ kks227님의 블로그와 그에 관한 문제들	
-	
-+ https://kdh9949.tistory.com/28
-	+ 보고좀배워라..! (┬┬﹏┬┬)
-	
 + https://www.acmicpc.net/board/view/9820
 	+ 추천사이트
