@@ -4,7 +4,7 @@ using namespace std;
 const int VOLUME = 0, IMPORTANCE = 1;
 string lists[1001];
 int cache[102][1002],arr[2][1001],N,W,maxPath[1001][1001];
-
+//344ms
 int packing(int choosen,int remainVolume)
 {
 	int& ret = cache[choosen+1][remainVolume];
@@ -62,5 +62,75 @@ int main()
 		for(int i=0;i<size;++i)
 			cout << lists[i] << '\n';
 		
+	}
+}
+
+
+
+
+//20ms
+
+#include <iostream>
+#include <cstring>
+#include <vector>
+using namespace std;
+const int VOLUME = 0, IMPORTANCE = 1;
+
+string lists[1001];
+int cache[102][1002],arr[2][1001],N,W;
+
+int packing(int choosen,int capacity)
+{
+	if(choosen == N) return 0;
+	int& ret = cache[choosen][capacity];
+	if(ret != -1) return ret;
+	
+	ret = packing(choosen+1,capacity);
+	
+	if(capacity >= arr[VOLUME][choosen] )
+		ret = max(ret,packing(choosen+1,capacity - arr[VOLUME][choosen]) + arr[IMPORTANCE][choosen]);
+	
+	return ret;
+}
+
+void reconstruct(int choosen,int capacity, vector<string>& picked)
+{
+	if(choosen == N) return; 
+	
+	if(packing(choosen,capacity) == packing(choosen+1,capacity))
+		reconstruct(choosen+1,capacity,picked);
+	else
+	{
+		picked.push_back(lists[choosen]);
+		reconstruct(choosen+1,capacity- arr[VOLUME][choosen],picked);
+	}
+}
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	int TC;
+	cin >> TC;
+	while(TC--)
+	{
+		int W;
+		vector<string> path;
+		memset(cache,-1,sizeof(cache));
+		
+		cin >> N >> W;
+		for(int i=0;i<N;++i)
+			cin >> lists[i] >> arr[VOLUME][i] >> arr[IMPORTANCE][i];
+		
+		int ans = packing(0,W);
+		reconstruct(0,W,path);
+		
+		cout << ans << ' ';
+		cout << path.size() << '\n';
+		
+		for(auto& elem : path)
+			cout << elem << '\n';
 	}
 }
