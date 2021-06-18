@@ -9,7 +9,7 @@
 
 
 
-## 내 사이트들
+## 사이트들
 + https://github.com/Invidam/Problem-Solving
 	+ 깃헙
 	
