@@ -1,0 +1,8 @@
+ex1 = ['INT', 'INT', 'BOOL', 'SHORT', 'LONG']
+an1 = "########,########,#.##....,########,########"
+ex2 = ['INT', 'SHORT', 'FLOAT', 'INT', 'BOOL']
+an2 = '########,##..####,########,#.......'
+ex3 = ['FLOAT', 'SHORT', 'BOOL', 'BOOL', 'BOOL', 'INT']
+an3 = '########,#.......,########'
+ex4 = ['BOOL', 'LONG', 'SHORT', 'LONG', 'BOOL', 'LONG', 'BOOL', 'LONG', 'SHORT', 'LONG', 'LONG']
+an4 = 'HALT'
