@@ -1,6 +1,1 @@
-goorm.manifest
-bin/
-src/
-TC
-a.out
-Others/
+.vscode
