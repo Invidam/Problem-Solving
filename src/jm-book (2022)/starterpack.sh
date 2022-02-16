@@ -6,7 +6,9 @@ using namespace std;
 //Problem site: https://algospot.com/judge/problem/read/$1
 
 int main() {
-
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     return 0;
 }
 " > $1/$1.cc
