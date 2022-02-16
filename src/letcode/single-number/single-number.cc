@@ -2,7 +2,8 @@
 #include <vector>
 using namespace std;
 
-//Problem site: https://www.acmicpc.net/problem/136
+// Problem site: https://leetcode.com/problems/single-number
+
 class Solution {
 public:
     int answrSingleNumber(vector<int>& nums) {
