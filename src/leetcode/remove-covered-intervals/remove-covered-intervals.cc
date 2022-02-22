@@ -19,16 +19,8 @@ class Solution
 public:
     int removeCoveredIntervals(vector<vector<int>> &intervals)
     {
-        for (auto elem : intervals)
-        {
-            cout << elem[0] << "," << elem[1] << " ";
-        }
-        cout << "\n";
         sort(intervals.begin(), intervals.end(), cmp);
 
-        for (auto elem : intervals)
-            cout << elem[0] << "," << elem[1] << " ";
-        cout << "\n";
         int topIdx = 0, ret = 1;
 
         for (int i = 1; i < intervals.size(); ++i)
