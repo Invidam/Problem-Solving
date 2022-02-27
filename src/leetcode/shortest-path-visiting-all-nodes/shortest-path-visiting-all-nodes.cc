@@ -1,10 +1,9 @@
 #include <iostream>
 #include <vector>
-#include <map>
 #include <queue>
+#include <tuple>
 #include <utility>
 using namespace std;
-
 typedef pair<int, int> p;
 string intToBinStr(int num)
 {
@@ -26,7 +25,6 @@ string intToBinStr(int num)
 }
 // Problem site: https://leetcode.com/problems/shortest-path-visiting-all-nodes
 const int MAX = 1 << 12;
-map<p, int> cache;
 class Data
 {
 public:
@@ -48,13 +46,8 @@ public:
     }
     void visit(int idx)
     {
-        if (isVisited(idx))
-        {
-            // cout << "ALREADY VISIT : " << idx << "!\n";
-            return;
-        }
         int bit = 1 << idx;
-        visitedData += bit;
+        visitedData = visitedData | bit;
     }
     int get()
     {
@@ -74,72 +67,52 @@ private:
     int MAX_DATA;
 };
 
-int shortestPathLengthFor(int idx, Data &data, vector<vector<int>> &graph)
-{
-    if (data.isMax())
-        return 0;
-    int depth = 1;
-    int ret = MAX;
-    queue<p> q;
-    q.push(p(idx, data.get()));
-    while (!q.empty())
-    {
-        int qSize = q.size();
-        while (qSize--)
-        {
-            int topIdx = q.front().first;
-            int topDataVal = q.front().second;
-
-            q.pop();
-            Data topData = Data(topDataVal, graph.size());
-            for (auto nextIdx : graph[topIdx])
-            {
-                Data nextData = Data(topDataVal, graph.size());
-                nextData.visit(nextIdx);
-                p nextPairData = p(nextIdx, nextData.get());
-                if (nextData.isMax())
-                {
-                    ret = depth;
-                    cache[nextPairData] = ret;
-                    return ret;
-                }
-                if (cache.find(nextPairData) != cache.end())
-                {
-                    if (cache[nextPairData] < depth)
-                        continue;
-                    // ret = depth + cache[nextPairData];
-                    // return ret;
-                }
-                q.push(nextPairData);
-                cache[nextPairData] = depth;
-            }
-        }
-        depth++;
-    }
-    return ret;
-}
 class Solution
 {
 public:
     int shortestPathLength(vector<vector<int>> &graph)
     {
-        cache.clear();
+        int n = graph.size();
+        queue<tuple<int, int, int>> q;
+        vector<vector<bool>> cache = vector<vector<bool>>(MAX, vector<bool>(MAX, false));
         int ret = MAX;
         for (int i = 0; i < graph.size(); ++i)
         {
-            Data data = Data(i, 0, graph.size());
-            int cand = shortestPathLengthFor(i, data, graph);
-            ret = ret < cand ? ret : cand;
+            Data data = Data(0, graph.size());
+            data.visit(i);
+            cache[i][data.get()] = true;
+            q.push(tuple<int, int, int>(i, data.get(), 0));
+        }
+        while (!q.empty())
+        {
+            auto [topIdx, topDataVal, depth] = q.front();
+            q.pop();
+            if (Data(topDataVal, graph.size()).isMax())
+                return ret = depth;
+            for (auto nextIdx : graph[topIdx])
+            {
+                Data nextData = Data(topDataVal, graph.size());
+                nextData.visit(nextIdx);
+                if (cache[nextIdx][nextData.get()])
+                {
+                    continue;
+                }
+                cache[nextIdx][nextData.get()] = true;
+                q.push(tuple<int, int, int>(nextIdx, nextData.get(), depth + 1));
+            }
         }
         return ret;
     }
 };
-
 int main()
 {
     // vector<vector<int>> graph = {{1}, {0, 2, 4}, {1, 3, 4}, {2}, {1, 2}};
     // vector<vector<int>> graph = {{1, 2, 3}, {0}, {0}, {0}};
-    vector<vector<int>> graph = {{1}, {0, 2, 4}, {1, 3}, {2}, {1, 5}, {4}};
+    vector<vector<int>> graph = {{2, 3}, {7}, {0, 6}, {0, 4, 7}, {3, 8}, {7}, {2}, {5, 3, 1}, {4}};
+    // vector<vector<int>> graph = {{1}, {0}};
+    // vector<vector<int>> graph = {{1}, {0, 2, 4}, {1, 3}, {2}, {1, 5}, {4}};
     cout << Solution().shortestPathLength(graph);
     return 0;
 }
+
+// 얘만 7이 나옴 예시 확인해봐야 할듯 그려가면서
