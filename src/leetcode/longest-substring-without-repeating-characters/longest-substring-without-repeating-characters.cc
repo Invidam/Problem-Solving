@@ -1,6 +1,6 @@
 #include <iostream>
 #include <map>
-#include <queue>
+#include <vector>
 using namespace std;
 
 // Problem site: https://leetcode.com/problems/longest-substring-without-repeating-characters
@@ -11,18 +11,14 @@ public:
     {
         map<char, int> charCache;
         int cand = 0, ret = 0;
-        queue<int> q;
+        vector<int> arr;
         for (int i = 0; i < s.length(); ++i)
         {
-            cout << (charCache[s[i]] >= q.front()) << charCache[s[i]] << q.front() << "\n";
-            if (charCache[s[i]] >= q.front())
-            {
-                while (!q.empty())
-                    q.pop();
-            }
+            while (!arr.empty() && charCache.find(s[i]) != charCache.end() && charCache[s[i]] >= arr.front())
+                arr.erase(arr.begin(), arr.begin() + 1);
             charCache[s[i]] = i;
-            q.push(i);
-            ret = ret > q.size() ? ret : q.size();
+            arr.push_back(i);
+            ret = ret > arr.size() ? ret : arr.size();
         }
 
         return ret;
@@ -30,6 +26,6 @@ public:
 };
 int main()
 {
-    cout << Solution().lengthOfLongestSubstring("dvdvf");
+    cout << Solution().lengthOfLongestSubstring("ab");
     return 0;
 }
