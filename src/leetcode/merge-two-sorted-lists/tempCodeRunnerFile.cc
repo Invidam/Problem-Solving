@@ -1,0 +1,1 @@
+itr2 == nullptr || itr1->val < itr2->val
