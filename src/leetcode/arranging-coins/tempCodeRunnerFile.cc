@@ -1,5 +1,1 @@
-k <
-                          0
-                      ? (std::numeric_limits<int>::max())
-                      : k)
-              
+8 * (val + 1) + 1

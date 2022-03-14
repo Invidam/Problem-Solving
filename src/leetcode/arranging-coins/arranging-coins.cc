@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits>
+#include <math.h>
 
 // Problem site: https://leetcode.com/problems/arranging-coins
 // https://leetcode.com/problems/arranging-coins/
@@ -19,8 +20,7 @@ public:
     void makeStairSum2()
     {
 
-        stairSum = (1 + sqrt(8 * val + 1)) / 2 - 1;
-        stairSum = (stairSum < 0 ? (std::numeric_limits<int>::max()) : stairSum);
+        rows = ((sqrt(((long long)8 * (val + 1) + 1))) + 1) / 2;
     }
     //계단 수의 합이 val보다 작은지 비교
     // 입력된 val을 채울만큼의(sum[k-1] < val <= sum[k]) 계단을 생성하였을 때의 합을 구한다.
@@ -51,6 +51,7 @@ public:
     {
         makeStairSum2();
         return rows;
+        // return ((sqrt((8 *  ((long long)val + 1) - 1))) + 1) / 2 - 1;;
     }
 };
 
@@ -64,8 +65,13 @@ public:
 };
 int main()
 {
-    std::cout << Solution().arrangeCoins(5) << "\n";
+    std::cout << Solution().arrangeCoins(2147385345) << "\n";
     std::cout << Solution().arrangeCoins(2147483647) << "\n";
-}
+    std::cout << Solution().arrangeCoins(51) << "\n";
+    std::cout << Solution().arrangeCoins(26) << "\n";
 
-// https://leetcode.com/submissions/detail/659796649/
+    int n{2147483647}, k;
+    k = (1 + sqrt(8 * n + 1)) / 2;
+    std::cout << n << "\n"
+              << (k < 0 ? (std::numeric_limits<int>::max()) : k) << "\n";
+}
