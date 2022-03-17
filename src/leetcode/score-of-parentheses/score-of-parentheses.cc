@@ -42,7 +42,6 @@ public:
 };
 int main()
 {
-    //"(((8()())))"
     cout << Solution().scoreOfParentheses("(((811)))") << '\n';
     return 0;
 }
