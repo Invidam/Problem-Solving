@@ -26,9 +26,9 @@ void funcDfs(int curr, vector<vector<bool>> &adj, vector<bool> &visited)
         }
     }
 }
-void stackDfs(int curr, vector<vector<bool>> &adj, vector<bool> &visited)
+void stackDfs(int curr, vector<vector<bool>>& adj, vector<bool> &visited)
 {
-    int N{adj.size()};
+    int N{static_cast<int>(adj.size())};
     stack<int> s;
     s.push(curr);
     while (!s.empty())

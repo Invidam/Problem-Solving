@@ -1,8 +1,8 @@
-.vscode
-지원.md
-bulid/**
-bulid/*
-bulid/
+# 설정
+CMakeLists.txt
+cmake-build-debug
 
-./bulid
-src/assignment/**
+# 기타
+template.txt
+#
+.idea/
